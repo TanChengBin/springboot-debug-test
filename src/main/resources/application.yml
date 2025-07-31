@@ -1,0 +1,37 @@
+# Spring Boot 应用配置文件
+# 使用YAML格式，用于配置应用的各种参数
+
+# 服务器配置
+server:
+  # 应用启动端口，默认8080
+  port: 8080
+  # 应用上下文路径
+  servlet:
+    context-path: /api
+
+# Spring应用配置
+spring:
+  # 应用名称
+  application:
+    name: springboot-debug-test
+  
+  # 日志配置
+  logging:
+    # 日志级别配置
+    level:
+      # 根日志级别
+      root: INFO
+      # 当前包的日志级别
+      com.cpolar.springbootdebugtest: DEBUG
+    # 日志输出格式
+    pattern:
+      console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+# 自定义配置
+app:
+  # 应用描述
+  description: "Spring Boot项目用于模拟IDEA远程调试"
+  # 版本信息
+  version: "1.0.0"
+  # 作者信息
+  author: "cpolar" 
